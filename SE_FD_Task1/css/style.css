@@ -67,7 +67,16 @@ body {
 
 /* main content style */
 
+.hero-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
 
+.hero-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .container section .row {
     display: flex;
