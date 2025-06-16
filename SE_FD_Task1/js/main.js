@@ -27,9 +27,6 @@ function typeWriter() {
 }
 typeWriter();
 
-
-
-
 const popup1 = document.getElementById("popup1");
 const popup2 = document.getElementById("popup2");
 const popup3 = document.getElementById("popup3");
@@ -44,7 +41,6 @@ function showpopup1() {
     btn1.classList.add("active");
     btn2.classList.remove("active");
     btn3.classList.remove("active");
-
 }
 function showpopup2() {
     popup1.classList.add("d-none");
@@ -53,7 +49,6 @@ function showpopup2() {
     btn1.classList.remove("active");
     btn2.classList.add("active");
     btn3.classList.remove("active");
-
 }
 
 function showpopup3() {
@@ -63,5 +58,8 @@ function showpopup3() {
     btn1.classList.remove("active");
     btn2.classList.remove("active");
     btn3.classList.add("active");
-
 }
+
+window.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.hero-section').classList.add('visible');
+});
