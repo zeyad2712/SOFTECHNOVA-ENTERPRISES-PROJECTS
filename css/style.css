@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #000000f4;
+    --nav-color: #14213D;
+    --color1: #FCA311;
+    --color2: #E5E5E5;
+    --text-color: #fff;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Arial', sans-serif;
+}
+
+/* navbar style */
+
+.navbar {
+    background-color: var(--nav-color) !important;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 40px;
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+}
+
+.navbar .navbar-brand {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 23px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar .list ul {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    list-style: none;
+}
+
+.navbar .list ul li a {
+    list-style: none;
+    padding-inline: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .list ul li a:hover {
+    color: var(--color1);
+}
+
+
+/* main content style */
+
+
+
+.container section .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container section .row .col-md-6 img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.container section .row .side {
+    color: var(--text-color);
+}
+
+.container section .row .side .btns a {
+    text-decoration: none;
+    padding-inline: 10px;
+}
+
+.container section .row .side .btns a button {
+    border: none;
+    border-radius: 30px;
+    padding: 15px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.container section .row .side .btns a button:hover {
+    background-color: var(--color1);
+    color: var(--text-color);
+    transform: scale(1.05);
+}
+
+.animated-text #typing {
+    border-right: 2px solid #007bff;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    0%,
+    100% {
+        border-color: #007bff;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* second section */
+
+.skill {
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.skill .heading {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skill .card-holders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill .card-holders .card {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill .card-holders .card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* third section */
+
+section .heading {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+section .heading::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--color1);
+    margin: 10px auto;
+}
+
+section .btnn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+section .btnn button {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+section .btnn button:hover {
+    background-color: var(--color1);
+    color: var(--text-color);
+    transform: scale(1.05);
+}
+
+section .btnn .active {
+    background-color: var(--color1);
+    color: var(--text-color);
+    transform: scale(1.05);
+}
+
+section .popup1 {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--nav-color);
+}
+
+section .popup1 p {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* fourth section */
+
+section .portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+section .portfolio .card {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    width: 25%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: transform 0.3s ease;
+}
+
+section .portfolio .card:hover {
+    transform: translateY(-10px);
+}
+
+/* fifth section */
+
+section form {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+section form .form-label {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+section form .btn {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+section form .btn:hover {
+    background-color: var(--color1);
+    color: var(--text-color);
+    transform: scale(1.05);
+}
+
+/* the responsive design */
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 10px;
+        border-radius: 0 0 50px 50px;
+        top: 0;
+    }
+
+    .navbar>.container-fluid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar .list ul {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .navbar .list ul li a {
+        font-size: 11px;
+        padding-inline: 5px;
+    }
+
+    .container section .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .container section .row .col-md-6 img {
+        width: 70%;
+        height: 250px;
+    }
+
+    .container section .row .side .btns a button {
+        margin-bottom: 10px;
+    }
+
+    section .btnn {
+        flex-direction: column;
+    }
+
+    section .btnn button {
+        margin-bottom: 10px;
+    }
+
+    section .popup1 {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    section .portfolio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section .portfolio .card {
+        width: 100%;
+    }
+
+    section form {
+        text-align: center;
+    }
+
+    section form .form-label {
+        text-align: left;
+    }
+}
