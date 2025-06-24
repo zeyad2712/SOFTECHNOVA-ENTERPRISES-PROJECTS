@@ -9,39 +9,41 @@ document.addEventListener('scroll', function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Animate container
-    const container = document.querySelector('.courses-animate-container');
-    const cards = document.querySelectorAll('.courses-animate-card');
 
-    if (container) {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    container.classList.add('animated-fadeInUp');
-                    observer.disconnect();
-                }
-            });
-        }, { threshold: 0.2 });
-        observer.observe(container);
+// Card animation
+document.addEventListener('DOMContentLoaded', function () {
+    const animateContainer = document.querySelector('.courses-animate-container');
+    const animateCards = document.querySelectorAll('.courses-animate-card');
+
+    // Make container visible immediately
+    animateContainer.style.opacity = '1';
+
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
     }
 
-    // Animate cards with stagger
-    if (cards.length) {
-        const cardObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry, idx) => {
-                if (entry.isIntersecting) {
-                    // Stagger effect
-                    setTimeout(() => {
-                        entry.target.classList.add('animated-fadeInUp');
-                    }, idx * 150);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-
-        cards.forEach(card => {
-            cardObserver.observe(card);
+    // Function to animate cards when they come into view
+    function animateCardsOnScroll() {
+        animateCards.forEach((card, index) => {
+            if (isInViewport(card)) {
+                // Add delay based on index for staggered effect
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.classList.add('animated-fadeInUp');
+                }, index * 100); // 100ms delay between each card
+            }
         });
     }
+
+    // Initial check
+    animateCardsOnScroll();
+
+    // Check on scroll
+    window.addEventListener('scroll', animateCardsOnScroll);
 });
+
