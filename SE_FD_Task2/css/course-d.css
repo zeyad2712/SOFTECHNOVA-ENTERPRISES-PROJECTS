@@ -16,7 +16,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 /* navbar style */
 
 .ezy__nav5 {
@@ -153,6 +152,7 @@ html {
     cursor: pointer;
     background-color: var(--color5) !important;
     border: none !important;
+    border-radius: 10px;
     color: var(--color1) !important;
     font-size: 18px;
     font-weight: 600;
@@ -200,138 +200,93 @@ html {
 }
 
 
-/* instructors section style */
-.ezy__team4 {
-    /* Bootstrap variables */
-    --bs-body-color: #212529;
-    --bs-body-bg: rgb(255, 255, 255);
 
-    /* Easy Frontend variables */
-    --ezy-theme-color: rgb(13, 110, 253);
-    --ezy-theme-color-rgb: 13, 110, 253;
-    --ezy-item-bg: #ffffff;
-    --ezy-item-shadow: 0px 4px 44px rgba(159, 190, 218, 0.37);
+/* the search bar style */
 
-    background: var(--bs-body-bg);
-    overflow: hidden;
-    padding: 60px 0;
-}
-
-@media (min-width: 768px) {
-    .ezy__team4 {
-        padding: 100px 0;
-    }
-}
-
-/* Gray Block Style */
-.gray .ezy__team4,
-.ezy__team4.gray {
-    /* Bootstrap variables */
-    --bs-body-bg: rgb(246, 246, 246);
-
-    /* Easy Frontend variables */
-    --ezy-item-bg: #fff;
-    --ezy-item-shadow: 0px 4px 44px rgba(199, 227, 252, 0.17);
-}
-
-/* Dark Gray Block Style */
-.dark-gray .ezy__team4,
-.ezy__team4.dark-gray {
-    /* Bootstrap variables */
-    --bs-body-color: #ffffff;
-    --bs-body-bg: rgb(30, 39, 53);
-
-    /* Easy Frontend variables */
-    --ezy-item-bg: rgb(11, 23, 39);
-    --ezy-item-shadow: none;
-}
-
-/* Dark Block Style */
-.dark .ezy__team4,
-.ezy__team4.dark {
-    /* Bootstrap variables */
-    --bs-body-color: #ffffff;
-    --bs-body-bg: rgb(11, 23, 39);
-
-    /* Easy Frontend variables */
-    --ezy-item-bg: rgb(30, 39, 53);
-    --ezy-item-shadow: none;
-}
-
-.ezy__team4-heading {
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 25px;
-    color: var(--bs-body-color);
-}
-
-@media (min-width: 768px) {
-    .ezy__team4-heading {
-        font-size: 45px;
-        line-height: 45px;
-    }
-}
-
-.ezy__team4-sub-heading {
-    font-size: 16px;
-    line-height: 22px;
-    color: var(--bs-body-color);
-}
-
-.ezy__team4-item {
-    background-color: var(--ezy-item-bg);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--ezy-item-shadow);
-    transition: transform 0.25s ease-in-out;
+.search-bar {
     display: flex;
-    flex-direction: column;
-    height: 50%;
+    gap: 15px;
+}
+
+
+
+.search-bar .form button {
+    cursor: pointer;
+    padding: 6px 15px;
+    height: fit-content;
+    margin-left: 15px;
+    background-color: var(--color1) !important;
+    border: none !important;
+    color: #fff !important;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.search-bar .form button:hover {
+    transform: scale(1.09);
+}
+
+
+/* the content style */
+
+.cards-hold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    gap: 25px;
+}
+
+.cards-hold img {
+    border: none;
+    border-radius: 20px;
+}
+
+.cards-hold .card {
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 63px -15px #022F40;
+    transition: all 0.3s ease-in-out 0s;
+    padding: 10px;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(30px);
     transition: all 0.6s ease-out;
 }
 
-.ezy__team4-item:hover {
-    transform: translateY(-5px);
+.cards-hold .card:hover {
+    box-shadow: 0px 0px 50px 6px #022F40;
+    transform: translateY(-10px);
 }
 
-.ezy__team4-item.animate {
-    opacity: 1;
-    transform: translateY(0);
+.cards-hold .card-body .btn-price {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.ezy__team4-item:hover img {
-    filter: brightness(1);
-}
 
-.ezy__team4-item img {
-    border-radius: 15px;
-    padding: 8px;
-    filter: brightness(0.6);
+.cards-hold .card-body .btn-price button {
+    cursor: pointer;
+    padding: 6px 15px;
+    height: fit-content;
+    margin-left: 15px;
+    background-color: var(--color1) !important;
+    border: none !important;
+    border-radius: 10px;
+    color: #fff !important;
+    font-size: 18px;
+    font-weight: 600;
     transition: all 0.3s ease-in-out 0s;
 }
 
 
-.ezy__team4-content * {
-    color: var(--bs-body-color);
-}
+/* Add to your existing CSS */
 
-.ezy__team4-social-links a {
-    display: inline-block;
-    opacity: 0.6;
-    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out, color 0.25s ease-in-out;
-}
-
-.ezy__team4-social-links a:hover {
-    transform: translateY(5px);
-    color: var(--bs-body-color);
+.cards-hold .card.animate {
     opacity: 1;
+    transform: translateY(0);
 }
-
-
-
-
 
 
 
@@ -439,4 +394,32 @@ html {
 .ezy__footer13-copyright a {
     color: #fff;
     text-decoration: none;
+}
+
+
+/* back to top button style */
+
+
+.ezy__back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--color1);
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.ezy__back-to-top:hover {
+    background-color: #fff;
+    color: var(--color1);
 }

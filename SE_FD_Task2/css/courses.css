@@ -232,6 +232,7 @@ html {
     scale: 1.05;
 }
 
+
 .cards-holder .card img {
     border: none;
     border-radius: 10px;
@@ -239,6 +240,7 @@ html {
 
 .card .card-body .card-title {
     margin: 10px 0;
+    margin-bottom: 25px;
 }
 
 .card .card-body .btn {
@@ -255,7 +257,6 @@ html {
     background-color: var(--color5);
     color: var(--color1);
 }
-
 
 @keyframes fadeInUp {
     0% {
