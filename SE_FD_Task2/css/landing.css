@@ -260,6 +260,11 @@ html {
     --ezy-body-color-invert: rgb(30, 39, 53);
 }
 
+.ezy__header42 .shape1 {
+    animation: motion4 2s infinite 1s;
+
+}
+
 .ezy__header42-heading {
     font-weight: bold;
     font-size: 32px;
@@ -338,6 +343,8 @@ html {
     position: absolute;
     top: 20%;
     left: 5%;
+    animation: motion4 2s infinite 1.5s;
+
 }
 
 .ezy__header42-shape-four {
