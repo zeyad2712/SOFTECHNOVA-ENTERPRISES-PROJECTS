@@ -291,6 +291,26 @@ html {
 }
 
 
+@media(max-width:700px){
+    .cards-hold img{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+
+    .search-bar{
+        gap: 5px;
+    }
+
+    .search-bar h4{
+        font-size: 15px;
+    }
+
+    .search-bar .form button {
+        font-size: 16px;
+    }
+}
+
 
 
 

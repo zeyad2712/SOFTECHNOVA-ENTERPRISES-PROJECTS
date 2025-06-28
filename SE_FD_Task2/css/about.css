@@ -312,6 +312,19 @@ html {
     #section1 {
         text-align: center;
     }
+
+    .animate-slide-up {
+        font-size: 15px;
+    }
+
+    .card {
+        text-align: center;
+    }
+
+    .card .card-body h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
 }
 
 

@@ -180,3 +180,18 @@ body {
     color: var(--color1);
     background-color: #fff;
 }
+
+@media(max-width:700px) {
+    .form {
+        padding: 15px 25px;
+    }
+
+    .eye {
+        margin-right: 10px;
+    }
+
+    .back {
+        bottom: 5px;
+        right: 5px;
+    }
+}
